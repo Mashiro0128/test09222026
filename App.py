@@ -56,7 +56,7 @@ st.markdown("""
     <style>
     /* 針對側邊欄的標題按鈕進行美化 */
     div[data-testid="stSidebar"] button[key="title_logo"] {
-        background: url('your_handwritten_title.png.png') no-repeat center center !important;
+        background: url("your_handwritten_title.png.png") no-repeat center center !important;
         background-size: contain !important;
         height: 80px !important;
         border: none !important;
