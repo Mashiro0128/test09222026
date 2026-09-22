@@ -48,7 +48,7 @@ st.markdown(
 
 # 2. 側邊欄抬頭資訊
 # 側邊欄頂部
-st.sidebar.image("your_handwritten_title.png.png", use_container_width=True)
+st.sidebar.image("your_handwritten_title.png.png")
 
 # 2. 圖片下方放一個回到首頁的按鈕
 if st.sidebar.button("🏠 返回首頁", use_container_width=True):
