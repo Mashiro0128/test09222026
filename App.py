@@ -3,7 +3,7 @@ import numpy as np
 import streamlit as st
 
 st.set_page_config(page_title="御風東都全球資訊網（測試版）")
-st.title("御風東都全球資訊網（測試版）","left")
+st.title("御風東都全球資訊網（測試版）",width="left")
 st.divider()
 
 st.sidebar.markdown("""
