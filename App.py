@@ -2,10 +2,38 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 
-st.image("2025-05-19_21.37.15.jpg")
-st.set_page_config(page_title="御風東都全球資訊網（測試版）")
-st.title("御風東都全球資訊網（測試版）")
-st.divider()
+st.set_page_config(page_title="御風東都全球資訊網（測試版）", layout="wide")
+# 1. 填入你的圖片網址（或是 GitHub 圖片路徑）
+img_url = "https://raw.githubusercontent.com/你的帳號/你的專案/main/your_image.png"
+
+# 2. 用 HTML/CSS 渲染全寬背景與文字
+st.markdown(
+    f"""
+    <div style="
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('{img_url}');
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+    ">
+        <h1 style="
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+            text-align: center;
+            margin: 0;
+        ">
+            御風東都全球資訊網（測試版）
+        </h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 st.sidebar.markdown("""
     廢土伺服器第九分流\n
