@@ -11,5 +11,5 @@ sider_text = st.sidebar.text_area("御風東都行政機關")
 
 tab1, tab2, tab3 = st.tabs(["📊 回報清查", "📖 使用說明", "✉️ 聯絡資訊"])
 
-with tab1
+with tab1:
     st.title("政務院")
