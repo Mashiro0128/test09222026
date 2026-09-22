@@ -3,8 +3,7 @@ import numpy as np
 import streamlit as st
 
 st.set_page_config(page_title="御風東都全球資訊網（測試版）", layout="wide")
-# 1. 填入你的圖片網址（或是 GitHub 圖片路徑）
-img_url = "https://raw.githubusercontent.com/你的帳號/你的專案/main/your_image.png"
+img_url = "2025-05-19_21.37.15.jpg"
 
 # 2. 用 HTML/CSS 渲染全寬背景與文字
 st.markdown(
