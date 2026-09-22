@@ -1,15 +1,17 @@
 import streamlit as st
-#網址：https://windoftown.streamlit.app/
-# 匯入各個獨立的機關檔案
+
+# 網址：https://windoftown.streamlit.app/
+
+# 匯入各個獨立的機關檔案（未取消註解前，系統會以提示代替，不會掛掉）
 import page_gov10
-#import page_gov11
-#import page_gov12
-#import page_gov13
-#import page_info
+# import page_gov11
+# import page_gov12
+# import page_gov13
+# import page_info
 import page_info_his
-#import page_info_geo
-#import page_info_law
-#import page_anno
+# import page_info_geo
+# import page_info_law
+# import page_anno
 
 st.set_page_config(page_title="御風東都全球資訊網（測試版）", layout="wide")
 
@@ -44,13 +46,17 @@ st.markdown(
 )
 
 # 2. 側邊欄抬頭資訊
-st.sidebar.image("螢幕擷取畫面 2025-09-18 171217.webp") 
+st.sidebar.image("螢幕擷取畫面 2025-09-18 171217.webp")
 st.sidebar.markdown("""
     廢土伺服器第九分流  
     **御風東都社區**  
     歡迎你
 """)
 st.sidebar.divider()  # 加一條分隔線
+
+# 【補回點 1】初始化預設頁面狀態
+if "page" not in st.session_state:
+    st.session_state.page = "東都總府"
 
 # 3. 側邊欄按鈕：行政機關區塊
 st.sidebar.header("🏛️ 行政機關")
@@ -78,23 +84,41 @@ if st.sidebar.button("御風東都法律", use_container_width=True):
 if st.sidebar.button("各類公告", use_container_width=True):
     st.session_state.page = "各類公告"
 
+# 【補回點 2】取得當前選擇頁面，並用 if 作為開頭判斷
+current_page = st.session_state.page
+
 # 中央機關 [1, y]
-elif current_page == "東都總府":
-    page_gov10.render()  # 如果檔案專屬於東都總府，這裡甚至不需要傳參，直接呼叫 render() 即可
+if current_page == "東都總府":
+    page_gov10.render()
+
 elif current_page == "政務院":
-    page_gov11.render()
+    # page_gov11.render()
+    st.info("📜 政務院頁面建置中...")
+
 elif current_page == "協議院":
-    page_gov12.render()
+    # page_gov12.render()
+    st.info("⚖️ 協議院頁面建置中...")
+
 elif current_page == "主計院":
-    page_gov13.render()
+    # page_gov13.render()
+    st.info("📊 主計院頁面建置中...")
+
 # 認識御風類
 elif current_page == "介紹":
-    page_info.render()
+    # page_info.render()
+    st.info("📖 介紹頁面建置中...")
+
 elif current_page == "御風歷史":
     page_info_his.render()
+
 elif current_page == "御風東都地理":
-    page_info_geo.render()
+    # page_info_geo.render()
+    st.info("🗺️ 御風東都地理頁面建置中...")
+
 elif current_page == "御風東都法律":
-    page_info_law.render()
+    # page_info_law.render()
+    st.info("⚖️ 御風東都法律頁面建置中...")
+
 elif current_page == "各類公告":
-    page_anno.render()
+    # page_anno.render()
+    st.info("📢 各類公告頁面建置中...")
