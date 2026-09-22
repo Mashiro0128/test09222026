@@ -17,7 +17,7 @@ page = st.sidebar.radio(
 
 # 根據側邊欄選擇顯示對應內容
 if page == "東都總府":
-    st.title("御風東都中央行政委員會")
+    st.header("御風東都中央行政委員會")
     # 放置回報清查的內容...
 
 elif page == "政務院":
