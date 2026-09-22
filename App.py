@@ -72,6 +72,7 @@ if st.sidebar.button("東都總府", use_container_width=True):
     st.session_state.page = "東都總府"
 if st.sidebar.button("政務院", use_container_width=True):
     st.session_state.page = "政務院"
+    with st.sidebar.expander("📖 系統使用說明"):
 if st.sidebar.button("協議院", use_container_width=True):
     st.session_state.page = "協議院"
 if st.sidebar.button("主計院", use_container_width=True):
