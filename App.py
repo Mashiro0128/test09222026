@@ -72,16 +72,6 @@ if st.sidebar.button("東都總府", use_container_width=True):
     st.session_state.page = "東都總府"
 if st.sidebar.button("政務院", use_container_width=True):
     st.session_state.page = "政務院"
-    with st.sidebar.expander("📖 系統使用說明"):
-        st.markdown("""
-    **【新化】**
-    1. 匯出 Google 表單為 CSV 檔。
-    2. 上傳至本系統即可自動清查。
-    
-    **【名單維護】**
-    * 若人員有異動，直接在上方文字框修改，一人一行。
-    * 修改後系統會自動更新建制總人數。
-    """)
 if st.sidebar.button("協議院", use_container_width=True):
     st.session_state.page = "協議院"
 if st.sidebar.button("主計院", use_container_width=True):
