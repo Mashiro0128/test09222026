@@ -41,15 +41,15 @@ st.markdown(
 )
 
 # 2. 側邊欄抬頭資訊
-try:
-    st.sidebar.image("螢幕擷取畫面 2025-09-18 171217.png") 
-except:
-    pass
 st.sidebar.markdown("""
     廢土伺服器第九分流  
     **御風東都社區**  
     歡迎你
 """)
+try:
+    st.sidebar.image("螢幕擷取畫面 2025-09-18 171217.png") 
+except:
+    pass
 st.sidebar.divider()  # 加一條分隔線
 
 # 3. 側邊欄按鈕：行政機關區塊
