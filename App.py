@@ -2,7 +2,8 @@ import streamlit as st
 
 # 網址：https://windoftown.streamlit.app/
 
-# 匯入各個獨立的機關檔案（未取消註解前，系統會以提示代替，不會掛掉）
+# 匯入首頁與各個獨立的機關檔案
+import page_home
 import page_gov10
 # import page_gov11
 # import page_gov12
@@ -54,11 +55,11 @@ st.sidebar.markdown("""
 """)
 st.sidebar.divider()  # 加一條分隔線
 
-# 【補回點 1】初始化預設頁面狀態
+# 【修改處 1】將預設頁面設定為「首頁」
 if "page" not in st.session_state:
-    st.session_state.page = "東都總府"
+    st.session_state.page = "首頁"
 
-# 3. 側邊欄按鈕：行政機關區塊
+# 3. 側邊欄按鈕：行政機關區塊（不包含首頁按鈕）
 st.sidebar.header("🏛️ 行政機關")
 if st.sidebar.button("東都總府", use_container_width=True):
     st.session_state.page = "東都總府"
@@ -84,11 +85,15 @@ if st.sidebar.button("御風東都法律", use_container_width=True):
 if st.sidebar.button("各類公告", use_container_width=True):
     st.session_state.page = "各類公告"
 
-# 【補回點 2】取得當前選擇頁面，並用 if 作為開頭判斷
+
 current_page = st.session_state.page
 
+# 【修改處 2】進入網頁預設顯示「首頁」
+if current_page == "首頁":
+    page_home.render()
+
 # 中央機關 [1, y]
-if current_page == "東都總府":
+elif current_page == "東都總府":
     page_gov10.render()
 
 elif current_page == "政務院":
