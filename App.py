@@ -5,13 +5,13 @@ import streamlit as st
 st.set_page_config(page_title="御風東都全球資訊網（測試版）")
 st.title("御風東都全球資訊網（測試版）")
 
+st.sidebar.divider()  # 加一條分隔線
+st.sidebar.header("網站分頁")
 st.markdown("""
     廢土伺服器第九分流/n
     **御風東都社區**/n
     歡迎你
 """)
-st.sidebar.divider()  # 加一條分隔線
-st.sidebar.header("網站分頁")
 # 初始化預設分頁
 if "page" not in st.session_state:
     st.session_state.page = "東都總府"
