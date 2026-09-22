@@ -51,7 +51,7 @@ st.markdown(
 st.sidebar.image("your_handwritten_title.png.png")
 
 # 2. 圖片下方放一個回到首頁的按鈕
-if st.sidebar.button("返回首頁", icon="螢幕擷取畫面 2025-09-18 171217.webp"):
+if st.sidebar.button("返回首頁"):
     st.session_state.page = "首頁"
 
 st.sidebar.divider() # 加分隔線
