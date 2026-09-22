@@ -50,8 +50,6 @@ st.sidebar.divider()  # 加一條分隔線
 
 # 3. 側邊欄按鈕：行政機關區塊
 st.sidebar.header("🏛️ 行政機關")
-if st.sidebar.button("首頁", use_container_width=True):
-    st.session_state.page = "首頁"
 if st.sidebar.button("東都總府", use_container_width=True):
     st.session_state.page = "東都總府"
 if st.sidebar.button("政務院", use_container_width=True):
@@ -77,16 +75,19 @@ if st.sidebar.button("御風東都法律", use_container_width=True):
 if st.sidebar.button("各類公告", use_container_width=True):
     st.session_state.page = "各類公告"
 
-# 行政機關類
-if current_page in ["東都總府"]:
-    page_gov10.render_gov(current_page)
-elif current_page in ["政務院"]:
-    page_gov11.render_gov(current_page)
-elif current_page in ["協議院"]:
-    page_gov12.render_gov(current_page)
-elif current_page in ["主計院"]:
-    page_gov13.render_gov(current_page)
-#機關代號[x,y]；x=1中央；x=2地方；x=3其他國營
+# 中央機關 [1, y]
+elif current_page == "東都總府":
+    page_gov10.render()  # 如果檔案專屬於東都總府，這裡甚至不需要傳參，直接呼叫 render() 即可
+elif current_page == "政務院":
+    page_gov11.render()
+elif current_page == "協議院":
+    page_gov12.render()
+elif current_page == "主計院":
+    page_gov13.render()
+
+# 認識御風類
+elif current_page in ["介紹", "御風歷史", "御風東都地理", "御風東都法律", "各類公告"]:
+    page_info.render_info(current_page)
 
 # 認識御風類
 elif current_page in ["介紹", "御風歷史", "御風東都地理", "御風東都法律", "各類公告"]:
