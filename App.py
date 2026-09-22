@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 
+st.image("2025-05-19_21.37.15.jpg")
 st.set_page_config(page_title="御風東都全球資訊網（測試版）")
 st.title("御風東都全球資訊網（測試版）")
 st.divider()
