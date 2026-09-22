@@ -7,8 +7,6 @@ st.title("御風東都全球資訊網（測試版）")
 #st.header("")
 
 st.sidebar.header("網站分頁")
-sider_text = st.sidebar.text_area("御風東都行政機關")
-
 tab1, tab2, tab3 = st.tabs(["📊 回報清查", "📖 使用說明", "✉️ 聯絡資訊"])
 
 with tab1:
