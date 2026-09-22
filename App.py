@@ -9,7 +9,7 @@ import page_gov10
 # import page_gov12
 # import page_gov13
 # import page_info
-import page_info_his
+import page_info_his.py
 # import page_info_geo
 # import page_info_law
 # import page_anno
