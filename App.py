@@ -2,9 +2,9 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 
-st.image(https://2f13565bf2.cbaul-cdnwnd.com/d3e8776ba6c5702704fb782de36d3904/200000176-cad9dcad9f/2025-05-19_22.08.22.jpeg?ph=2f13565bf2)
+#st.image(“https://2f13565bf2.cbaul-cdnwnd.com/d3e8776ba6c5702704fb782de36d3904/200000176-cad9dcad9f/2025-05-19_22.08.22.jpeg?ph=2f13565bf2”)
 st.set_page_config(page_title="御風東都全球資訊網（測試版）")
-st.title("御風東都全球資訊網（測試版）")
+st.title("御風東都全球資訊網（測試版）","left")
 st.divider()
 
 st.sidebar.markdown("""
