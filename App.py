@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.set_page_cinfig(page_title="御風東都全球資訊網（測試版）")
+st.set_page_config(page_title="御風東都全球資訊網（測試版）")
 st.title("御風東都全球資訊網（測試版）")
 #st.header("")
 
