@@ -41,7 +41,7 @@ st.markdown(
 )
 
 # 2. 側邊欄抬頭資訊
-
+st.sidebar.image("螢幕擷取畫面 2025-09-18 171217")
 st.sidebar.markdown("""
     廢土伺服器第九分流  
     **御風東都社區**  
