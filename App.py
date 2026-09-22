@@ -47,7 +47,7 @@ st.sidebar.markdown("""
     歡迎你
 """)
 try:
-    st.sidebar.image("螢幕擷取畫面 2025-09-18 171217.png") 
+    st.sidebar.image("螢幕擷取畫面 2025-09-18 171217.webp") 
 except:
     pass
 st.sidebar.divider()  # 加一條分隔線
@@ -87,10 +87,6 @@ elif current_page == "協議院":
     page_gov12.render()
 elif current_page == "主計院":
     page_gov13.render()
-
-# 認識御風類
-elif current_page in ["介紹", "御風歷史", "御風東都地理", "御風東都法律", "各類公告"]:
-    page_info.render_info(current_page)
 
 # 認識御風類
 elif current_page in ["介紹", "御風歷史", "御風東都地理", "御風東都法律", "各類公告"]:
