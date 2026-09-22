@@ -4,7 +4,7 @@ import numpy as np
 
 st.set_page_cinfig(page_title="御風東都全球資訊網（測試版）")
 st.title("御風東都全球資訊網（測試版）")
-＃st.header("")
+#st.header("")
 
 st.sidebar.header("網站分頁")
 sider_text = st.sidebar.text_area("御風東都行政機關")
