@@ -47,6 +47,29 @@ st.markdown(
 )
 
 # 2. 側邊欄抬頭資訊
+# 側邊欄最上方：點擊可回首頁的「御風東都」手寫標題圖片
+# 如果點擊圖片按鈕，就把頁面狀態切換回 "首頁"
+if st.sidebar.button("御風東都", key="title_logo", use_container_width=True):
+    st.session_state.page = "首頁"
+# 使用 CSS 自訂這個按鈕，讓它隱藏按鈕邊框，只呈現你去背的標題圖片
+st.markdown("""
+    <style>
+    /* 針對側邊欄的標題按鈕進行美化 */
+    div[data-testid="stSidebar"] button[key="title_logo"] {
+        background: url('your_handwritten_title.png.png') no-repeat center center !important;
+        background-size: contain !important;
+        height: 80px !important;
+        border: none !important;
+        color: transparent !important; /* 隱藏原本按鈕上的文字 */
+        box-shadow: none !important;
+    }
+    div[data-testid="stSidebar"] button[key="title_logo"]:hover {
+        opacity: 0.8; /* 滑鼠懸停時微亮/變淡 */
+        cursor: pointer;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 st.sidebar.image("螢幕擷取畫面 2025-09-18 171217.webp")
 st.sidebar.markdown("""
     廢土伺服器第九分流  
