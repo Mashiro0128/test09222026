@@ -41,7 +41,7 @@ st.sidebar.markdown("""
     歡迎你
 """)
 st.sidebar.divider()  # 加一條分隔線
-st.sidebar.header("網站分頁")
+st.sidebar.header("行政機關")
 # 初始化預設分頁
 if "page" not in st.session_state:
     st.session_state.page = "東都總府"
@@ -64,14 +64,46 @@ if page == "首頁":
     st.title("歡迎蒞臨御風東都社區")
 #    st.markdown()
 elif page == "東都總府":
-    st.title("🏛️ 東都總府")
+    st.title("東都總府")
     st.write("這裡是東都總府頁面...")
 elif page == "政務院":
-    st.title("📜 政務院")
+    st.title("政務院")
     st.write("這裡是政務院頁面...")
 elif page == "協議院":
-    st.title("⚖️ 協議院")
+    st.title("協議院")
     st.write("這裡是協議院頁面...")
 elif page == "主計院":
-    st.title("📊 主計院")
+    st.title("主計院")
+    st.write("這裡是主計院頁面...")
+
+st.sidebar.header("認識御風")
+if st.sidebar.button("介紹", use_container_width=True):
+    st.session_state.page = "介紹"
+if st.sidebar.button("御風歷史", use_container_width=True):
+    st.session_state.page = "御風歷史"
+if st.sidebar.button("御風東都地理", use_container_width=True):
+    st.session_state.page = "御風東都地理"
+if st.sidebar.button("御風東都法律", use_container_width=True):
+    st.session_state.page = "御風東都法律"
+if st.sidebar.button("各類公告", use_container_width=True):
+    st.session_state.page = "各類公告"
+    
+page = st.session_state.page
+if page == "首頁":
+    st.title("歡迎蒞臨御風東都社區")
+#    st.markdown()
+elif page == "介紹":
+    st.title("介紹")
+    st.write("這裡是東都總府頁面...")
+elif page == "御風歷史":
+    st.title("御風歷史")
+    st.write("這裡是政務院頁面...")
+elif page == "御風東都地理":
+    st.title("御風東都地理")
+    st.write("這裡是協議院頁面...")
+elif page == "御風東都法律":
+    st.title("御風東都法律")
+    st.write("這裡是主計院頁面...")
+elif page == "各類公告":
+    st.title("各類公告")
     st.write("這裡是主計院頁面...")
