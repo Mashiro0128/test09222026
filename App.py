@@ -48,10 +48,6 @@ st.sidebar.markdown("""
 """)
 st.sidebar.divider()  # 加一條分隔線
 
-# 初始化 session_state 預設頁面
-if "page" not in st.session_state:
-    st.session_state.page = "首頁"
-
 # 3. 側邊欄按鈕：行政機關區塊
 st.sidebar.header("🏛️ 行政機關")
 if st.sidebar.button("首頁", use_container_width=True):
