@@ -2,11 +2,11 @@ import streamlit as st
 #網址：https://windoftown.streamlit.app/
 # 匯入各個獨立的機關檔案
 import page_gov10
-import page_gov11
-import page_gov12
-import page_gov13
-import page_home
-import page_info
+#import page_gov11
+#import page_gov12
+#import page_gov13
+#import page_home
+#import page_info
 
 st.set_page_config(page_title="御風東都全球資訊網（測試版）", layout="wide")
 
