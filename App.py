@@ -77,15 +77,8 @@ if st.sidebar.button("御風東都法律", use_container_width=True):
 if st.sidebar.button("各類公告", use_container_width=True):
     st.session_state.page = "各類公告"
 
-
-# 5. 根據目前 page 狀態分流呈現對應內容
-current_page = st.session_state.page
-
-if current_page == "首頁":
-    page_home.render_home()
-
 # 行政機關類
-elif current_page in ["東都總府"]:
+if current_page in ["東都總府"]:
     page_gov10.render_gov(current_page)
 elif current_page in ["政務院"]:
     page_gov11.render_gov(current_page)
