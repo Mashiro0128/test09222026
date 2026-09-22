@@ -25,7 +25,7 @@ st.markdown(
             font-size: 2.5rem;
             font-weight: bold;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-            text-align: center;
+            text-align: left;
             margin: 0;
         ">
             御風東都全球資訊網（測試版）
