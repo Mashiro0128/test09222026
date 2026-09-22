@@ -5,8 +5,11 @@ import page_gov10
 #import page_gov11
 #import page_gov12
 #import page_gov13
-#import page_home
 #import page_info
+import page_info_his
+#import page_info_geo
+#import page_info_law
+#import page_anno
 
 st.set_page_config(page_title="御風東都全球資訊網（測試版）", layout="wide")
 
@@ -41,15 +44,12 @@ st.markdown(
 )
 
 # 2. 側邊欄抬頭資訊
+st.sidebar.image("螢幕擷取畫面 2025-09-18 171217.webp") 
 st.sidebar.markdown("""
     廢土伺服器第九分流  
     **御風東都社區**  
     歡迎你
 """)
-try:
-    st.sidebar.image("螢幕擷取畫面 2025-09-18 171217.webp") 
-except:
-    pass
 st.sidebar.divider()  # 加一條分隔線
 
 # 3. 側邊欄按鈕：行政機關區塊
@@ -87,7 +87,14 @@ elif current_page == "協議院":
     page_gov12.render()
 elif current_page == "主計院":
     page_gov13.render()
-
 # 認識御風類
-elif current_page in ["介紹", "御風歷史", "御風東都地理", "御風東都法律", "各類公告"]:
-    page_info.render_info(current_page)
+elif current_page == "介紹":
+    page_info.render()
+elif current_page == "御風歷史":
+    page_info_his.render()
+elif current_page == "御風東都地理":
+    page_info_geo.render()
+elif current_page == "御風東都法律":
+    page_info_law.render()
+elif current_page == "各類公告":
+    page_anno.render()
